@@ -57,9 +57,9 @@ def build_model(results: List[Result]) -> Tuple[RandomForestClassifier, OneHotEn
     y = np.sign(home_goals - away_goals)
 
     model = RandomForestClassifier(n_estimators=200, 
-                                   max_depth=20, 
-                                #    random_state=42,
-                                   min_samples_split=5
+                                   max_depth=10, 
+                                   random_state=42,
+                                   min_samples_split=2 
                                    )
     model.fit(x, y)
 
